@@ -1,0 +1,16 @@
+<ng-container *ngIf="stepState === 'victory'; else step">
+  <h1>Victoire</h1>
+  <h2>Le jeu commence dans {{countDown}}</h2>
+</ng-container>
+<ng-template #step>
+  <h1>Frappe les rockstars pour gagner des points</h1>
+  <section class="scores" *ngIf="slots$ | async">
+    <div>gagnés : {{(3 - (getScore('rockstar') | async).length)}}</div>
+    <div>perdus : {{(3 - (getScore('clown') | async).length)}}</div>
+  </section>
+</ng-template>
+
+<section class="slots">
+  <app-slot class="item" *ngFor="let slot of slots$ | async" [slot]="slot">
+  </app-slot>
+</section>

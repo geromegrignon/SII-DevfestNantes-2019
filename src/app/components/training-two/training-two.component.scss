@@ -1,0 +1,38 @@
+.slots {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 200px);
+}
+
+.item {
+  align-self: center;
+  justify-self: center;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  font-family: 'New Rocker', cursive;
+  font-size: 8em;
+  margin: 0;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  font-family: 'New Rocker', cursive;
+  font-size: 6em;
+  margin-top: 2%;
+  margin-bottom: 0;
+}
+
+.scores {
+  display: flex;
+  justify-content: space-around;
+  font-family: 'New Rocker', cursive;
+  font-size: 5em;
+  margin-top: 2%;
+}

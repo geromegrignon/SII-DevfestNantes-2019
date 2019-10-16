@@ -1,0 +1,66 @@
+section {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 200px);
+}
+
+.item {
+  align-self: center;
+  justify-self: center;
+}
+p {
+  display: flex;
+  justify-content: center;
+  font-family: 'New Rocker', cursive;
+  font-size: 8em;
+  margin: 0;
+}
+
+span {
+  color: white;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.svg-container {
+  width: 100%;
+  svg {
+    position: absolute;
+    height: 15%;
+  }
+  #left-drum {
+    left: 0;
+    animation: 1.4s leftDrumstick infinite alternate ease-in;
+  }
+  #right-drum {
+    right: 0;
+    animation: 1.4s rightDrumstick infinite alternate ease-in;
+  }
+}
+
+
+
+@keyframes leftDrumstick {
+  0% {
+    left: 45%;
+    transform: rotate(0deg);
+  }
+  100% {
+    left: 40%;
+    transform: rotate(-30deg);
+  }
+}
+
+@keyframes rightDrumstick {
+  0% {
+    right: 45%;
+    transform: rotate(0deg);
+  }
+  100% {
+    right: 40%;
+    transform: rotate(30deg);
+  }
+}

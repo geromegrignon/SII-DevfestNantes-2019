@@ -1,0 +1,15 @@
+<header class="top-container">
+  <img class="logo" src="assets/png/logoSII.png" alt="">
+  <app-drumkit></app-drumkit>
+  <img class="logo" src="assets/png/logoSII.png" alt="">
+  <h2>{{match.score}}</h2>
+ <app-countdown class="countdown" [countdown]="countdown$ |async"></app-countdown>
+</header>
+<!--<div>{{match.score}} {{scoreMultiplicator}}</div>-->
+<!--<div class="score-container">-->
+<!--  <div class="score-content" [style.width.%]="(100 - (match.score * 10))">{{match.score}}</div>-->
+<!--</div>-->
+<section>
+  <app-slot class="item" *ngFor="let slot of slots$ | async" [slot]="slot">
+  </app-slot>
+</section>
