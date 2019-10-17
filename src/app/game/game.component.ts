@@ -15,6 +15,7 @@ export class GameComponent implements OnInit {
   public match: Match;
   public scoreMultiplicator: number;
   public countdown$: BehaviorSubject<number>;
+  public comboCounter: number;
 
   constructor(private gameService: GameService) { }
 
@@ -33,6 +34,7 @@ export class GameComponent implements OnInit {
     this.scoreMultiplicator = this.gameService.scoreMultiplicator;
     this.gameService.stateOfMatch$.next(StateOfMatch.MATCH_STARTED);
     this.countdown$ = this.gameService.match.gameCountdown$;
+    this.comboCounter = this.gameService.match.counter;
   }
 
 }

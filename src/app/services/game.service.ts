@@ -109,8 +109,9 @@ export class GameService {
   public updateScore(slot: Slot): void {
     if (slot.isActive) {
       this.drumkit.activateKickDrum();
-      this.match.score += this.scoreMultiplicator;
-      this.match.counter++;
+      // this.match.score += this.scoreMultiplicator;
+      this.match.score += 1;
+      // this.match.counter++;
       this.updateSlot(slot);
       this.start();
     }
