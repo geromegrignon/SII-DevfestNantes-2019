@@ -31,7 +31,7 @@ export class GameService {
   }
 
   public launchGame(): void {
-    this.match = new Match(60);
+    this.match = new Match(120);
     this.start();
     const interval = setInterval(() => {
       let updatedCountdown = this.match.gameCountdown$.value;
@@ -167,7 +167,7 @@ export class GameService {
   }
 
   private accelerateGameSpeed(): void {
-    this.match.slotActivationDuration -= 30;
-    this.match.intervalBetweenActivation -= 30;
+    this.match.slotActivationDuration -= 20;
+    this.match.intervalBetweenActivation -= 20;
   }
 }

@@ -11,6 +11,7 @@ const availablePositions = [10, 11, 12, 20, 21, 22];
 })
 export class FreedrumService {
   activeSensors = 0;
+  public requiredActiveSticks = 1;
 
   constructor(private router: Router, private gameService: GameService) {
   }

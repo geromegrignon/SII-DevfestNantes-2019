@@ -14,6 +14,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ScoreComponent } from './components/score/score.component';
 import { CountdownComponent } from './components/countdown/countdown.component';
 
+import {MatRadioModule} from '@angular/material/radio';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'training', component: TrainingComponent, canActivate: [SensorGuard]},
@@ -38,6 +41,9 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes),
     BrowserAnimationsModule,
+    MatRadioModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

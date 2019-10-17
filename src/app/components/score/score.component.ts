@@ -9,7 +9,7 @@ import {Router} from '@angular/router';
 })
 export class ScoreComponent implements OnInit {
   public score: number;
-  public countdown = 10;
+  public countdown = 20;
 
   constructor(private game: GameService, private router: Router) { }
 

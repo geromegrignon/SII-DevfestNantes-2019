@@ -30,5 +30,11 @@
         <div id="speaker-ring"></div>
       </button>
     </div>
+    <form [formGroup]="form">
+      <mat-radio-group aria-label="Select an option" formControlName="number">
+        <mat-radio-button [value]="1">1 baguette</mat-radio-button>
+        <mat-radio-button [value]="2">2 baguettes</mat-radio-button>
+      </mat-radio-group>
+    </form>
   </footer>
 </section>

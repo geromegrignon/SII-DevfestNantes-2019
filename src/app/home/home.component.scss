@@ -352,3 +352,24 @@ footer {
   }
 }
 
+mat-radio-group {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  margin-left: 40px;
+  padding: 20px;
+  border: 2px solid #F3CF14;
+}
+
+mat-radio-button {
+  color: white;
+}
+
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle , .mat-radio-outer-circle {
+  border-color: blue !important;
+}
+
+.mat-radio-button.mat-accent .mat-radio-inner-circle{
+  background-color: blue !important;
+}
